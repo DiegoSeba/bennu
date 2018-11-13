@@ -1,0 +1,63 @@
+SPRING BOOT MAS ANGULAR 4
+
+PAGINA A VISITAR:
+
+https://start.spring.io/ (DONSE SE CREA EL DEMO DEL PROYECTO EN SPRING BOOT)
+http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html   (PARA DESCARGAR LA VERSION DE JAVA 8)
+https://spring.io/tools   (IDE PARA DESARROLLO)
+
+
+
+DEPENDENCIAS:
+
+WEB (contiene el servidor apache tomcat embebido)
+JERSEY (para los servicios REST)
+JPA 
+MYSQL
+
+
+CONFIGURACION DE PROYECTO
+
+DENTRO DE LA CARPETA MAIN CREAR CARPETA webapp
+dentro de weabb crear una carpeta html
+dentro de la carpeta html crear archivo index.html
+
+CONFIGURAR ARCHIVO APLICATION.PROPERTIES
+configurar la página de inicio
+spring.mvc.view.prefix: /html/
+spring.mvc.view.suffix: .html
+
+y los datos de acceso a la base de datos
+
+spring.datasource.url= jdbc:mysql://localhost/nameDB?autoReconnect=true&useSSL=false
+spring.datasource.username=nombre ususario BD
+spring.datasource.password=contraseña BD
+spring.datasource.driver.class.name=com.mysql.jdbc.Driver
+
+SERVICIO PARA QUE NOS REDIRECCIONE A LA PAGINA PRINCIPAL
+
+ CREAR PAQUETE cl.spring.boot.controller
+ dentro del paquete crear una clase IndexController
+ dentro de la clase crear un metodo que devuelve un string que es la pagina donde queremos levantar nuestro proyecto
+ 
+ 
+ @Controller
+ public class IndexController{
+ 
+ @RequestMapping("/")
+ public String getIndexPage(){
+ 
+	return "index";
+ 
+ }
+ 
+ }
+
+PROBAR QUE LA PAGINA SE HA LEVANTADO
+localhost:8080
+
+crear paquete cl.spring.boot.modelo
+
+dentro de esa   
+
+
