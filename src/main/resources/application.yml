@@ -2,9 +2,9 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/usersdb?autoReconnect=true&useSSL=false
-    username: victor
-    password:
+    url: jdbc:mysql://localhost:3306/colegio?autoReconnect=true&useSSL=false
+    username: root
+    password: 
     
   jpa:
     hibernate.ddl-auto: update
@@ -13,6 +13,6 @@ spring:
 
     
 server:
-  port: 9095
+  port: 8085
 
 

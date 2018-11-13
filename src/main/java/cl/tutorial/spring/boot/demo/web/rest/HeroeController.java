@@ -45,7 +45,7 @@ public class HeroeController {
 		}
 		
 		this.heroeService.save(heroe);
-		return new RestResponse(HttpStatus.OK.value(), "Operación Exitosa");
+		return new RestResponse(HttpStatus.ACCEPTED.value(), "Operación Exitosa");
 	}
 
 	// método para validar los datos que recibo
@@ -83,10 +83,10 @@ public class HeroeController {
 	
 
 	@GetMapping(value ="/getheroebyname", produces = "application/json")
-	   public RestResponse  getHeroeByName( @RequestParam(value = "nombre") String nombre) {
-	        heroeService.getHeroe(nombre);
+	   public Heroe getHeroeByName( @RequestParam(value = "nombre") String nombre) {
+	      return this.heroeService.getHeroe(nombre);
 	         
-	    return new RestResponse(HttpStatus.OK.value(), "Operación Exitosa");
+	    //return new RestResponse(HttpStatus.OK.value(), "Operación Exitosa");
  
 	   }
 	
