@@ -2,7 +2,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/colegio?autoReconnect=true&useSSL=false
+    url: jdbc:jtds:Sqlserver://localhost:1433/Bennu;
     username: root
     password: 
     
