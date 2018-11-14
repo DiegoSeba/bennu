@@ -13,6 +13,7 @@ import java.util.List;
 @Repository
 public interface HeroeRepository extends JpaRepository<Heroe, Long>{
 	
+	
 	@SuppressWarnings("unchecked")
 	Heroe save (Heroe heroe);
 
