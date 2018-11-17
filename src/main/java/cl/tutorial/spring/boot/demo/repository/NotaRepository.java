@@ -1,3 +1,4 @@
+
 package cl.tutorial.spring.boot.demo.repository;
 
 import java.util.List;
@@ -13,3 +14,4 @@ public interface NotaRepository extends JpaRepository<Nota, Integer>{
 	//List<Nota>findAll(Nota nota);
 
 }
+
