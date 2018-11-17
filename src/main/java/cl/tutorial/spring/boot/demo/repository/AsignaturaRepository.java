@@ -5,11 +5,12 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import cl.tutorial.spring.boot.demo.domain.Nota;
+import cl.tutorial.spring.boot.demo.domain.Asignatura;
 
 @Repository
-public interface NotaRepository extends JpaRepository<Nota, Integer>{
+public interface AsignaturaRepository extends JpaRepository<Asignatura, Integer> {
 	
-	//List<Nota>findAll(Nota nota);
+	
+	//Asignatura buscarAsignatura (String nombre );
 
 }
