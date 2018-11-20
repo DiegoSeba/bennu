@@ -4,19 +4,22 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 
 @Entity
 @Table(name="nota")
-public class Nota implements Serializable {
+public class NotaEntity implements Serializable {
 	//identificador de la tabla
 	@Id
-    @Column(name = "idNota")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="idNota", unique=true, nullable=false  )
     private int id;
 	
-	@Column(name = "nota")
+	@Column(name = "nota",nullable=false)
     private float nota;
 
 	public int getId() {
@@ -52,7 +55,7 @@ public class Nota implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Nota other = (Nota) obj;
+		NotaEntity other = (NotaEntity) obj;
 		if (id != other.id)
 			return false;
 		if (Float.floatToIntBits(nota) != Float.floatToIntBits(other.nota))

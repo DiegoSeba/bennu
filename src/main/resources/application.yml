@@ -3,7 +3,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/Bennu
+    url: jdbc:mysql://localhost:3306/prueba?autoReconnect=true&useSSL=false
     username: root
     password: 
     

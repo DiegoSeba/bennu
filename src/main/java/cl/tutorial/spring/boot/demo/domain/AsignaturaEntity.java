@@ -11,14 +11,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="asignatura")
-public class Asignatura implements Serializable {
+public class AsignaturaEntity implements Serializable {
 	
 	@Id
     @Column(name = "idAsignatura")
     private int id;
 	@ManyToOne
     @JoinColumn(name = "nota")
-	private Nota idNota;
+	private NotaEntity idNota;
 	
 	@Column(name="nombreAsignatura",nullable=false,length=40)
 	private String nombreAsig;
@@ -31,11 +31,11 @@ public class Asignatura implements Serializable {
 		this.id = id;
 	}
 
-	public Nota getIdNota() {
+	public NotaEntity getIdNota() {
 		return idNota;
 	}
 
-	public void setIdNota(Nota idNota) {
+	public void setIdNota(NotaEntity idNota) {
 		this.idNota = idNota;
 	}
 
@@ -65,7 +65,7 @@ public class Asignatura implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Asignatura other = (Asignatura) obj;
+		AsignaturaEntity other = (AsignaturaEntity) obj;
 		if (id != other.id)
 			return false;
 		if (idNota == null) {

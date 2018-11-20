@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import cl.tutorial.spring.boot.demo.domain.Nota;
+import cl.tutorial.spring.boot.demo.domain.NotaEntity;
 
 @Service
 public interface NotaService {
 	
-	//List<Nota> FindAll(Nota nota);
+	List<NotaEntity> findAll();
 
 }
