@@ -20,6 +20,18 @@ public class AsignaturaServiceImpl implements AsignaturaService{
 		// TODO Auto-generated method stub
 		return asignaturaRepository.findAll();
 	}
+
+	@Override
+	public AsignaturaEntity findByNombreAsig(String nombreAsig) {
+		// TODO Auto-generated method stub
+		return asignaturaRepository.findByNombreAsig(nombreAsig);
+	}
+
+	@Override
+	public AsignaturaEntity save(AsignaturaEntity asignatura) {
+		// TODO Auto-generated method stub
+		return asignaturaRepository.save(asignatura);
+	}
 	
 	
 	

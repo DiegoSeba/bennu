@@ -7,5 +7,9 @@ import cl.tutorial.spring.boot.demo.domain.AsignaturaEntity;
 
 @Repository
 public interface AsignaturaRepository extends JpaRepository<AsignaturaEntity, Long>{
+	
+	AsignaturaEntity findByNombreAsig(String nombreAsig);
+	@SuppressWarnings("unchecked")
+	AsignaturaEntity save(AsignaturaEntity asignatura);
 
 }

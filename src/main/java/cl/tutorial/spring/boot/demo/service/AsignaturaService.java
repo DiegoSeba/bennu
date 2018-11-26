@@ -10,5 +10,7 @@ import cl.tutorial.spring.boot.demo.domain.AsignaturaEntity;
 public interface AsignaturaService {
 	
 	List<AsignaturaEntity> findAll();
+	AsignaturaEntity findByNombreAsig(String nombreAsig);
+	AsignaturaEntity save(AsignaturaEntity asignatura);
 
 }
