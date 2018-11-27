@@ -14,13 +14,13 @@ import javax.persistence.Table;
 public class AsignaturaEntity implements Serializable {
 	
 	@Id
-    @Column(name = "idAsignatura")
+    @Column(name = "id_asignatura")
     private int id;
 	@ManyToOne
     @JoinColumn(name = "nota")
 	private NotaEntity idNota;
 	
-	@Column(name="nombreAsignatura",nullable=false,length=40)
+	@Column(name="nombre_asignatura",nullable=false,length=40)
 	private String nombreAsig;
 
 	public int getId() {

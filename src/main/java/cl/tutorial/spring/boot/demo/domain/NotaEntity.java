@@ -16,7 +16,7 @@ public class NotaEntity implements Serializable {
 	//identificador de la tabla
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="idNota", unique=true, nullable=false  )
+	@Column(name="id_nota", unique=true, nullable=false  )
     private int id;
 	
 	@Column(name = "nota",nullable=false)

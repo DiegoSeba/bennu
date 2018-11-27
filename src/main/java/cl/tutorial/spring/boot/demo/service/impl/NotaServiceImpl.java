@@ -21,6 +21,18 @@ public class NotaServiceImpl implements NotaService{
 		return notaRespository.findAll();
 	}
 
+	@Override
+	public NotaEntity findByNota(float nota) {
+		// TODO Auto-generated method stub
+		return notaRespository.findByNota(nota);
+	}
+
+	@Override
+	public NotaEntity save(NotaEntity nota) {
+		// TODO Auto-generated method stub
+		return notaRespository.save(nota);
+	}
+
 	
 
 }

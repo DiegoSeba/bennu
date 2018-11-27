@@ -12,6 +12,8 @@ import cl.tutorial.spring.boot.demo.domain.NotaEntity;
 @Repository
 public interface NotaRepository extends JpaRepository<NotaEntity, Integer>{
 	
+	NotaEntity findByNota(float nota);//metodo para buscar por atributo.
+	
 	
 
 }

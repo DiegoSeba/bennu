@@ -10,5 +10,8 @@ import cl.tutorial.spring.boot.demo.domain.NotaEntity;
 public interface NotaService {
 	
 	List<NotaEntity> findAll();
+	NotaEntity findByNota(float nota);
+	
+	NotaEntity save(NotaEntity nota);
 
 }

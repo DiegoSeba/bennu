@@ -39,8 +39,25 @@ public class Controlador {
 		return notaService.findAll();
 	}
 	
-	//Metodo para obtener actualizar una nota usando JpaRepository
-	//Metodo para obtener eliminar una nota usando JpaRepository
+	//Metodo para obtener nota por atributo usando JpaRepository
+	@GetMapping(value ="/obtenerNota", produces = "application/json")
+	public NotaEntity retornaNota(@RequestParam(value = "notas") float notas ) {
+		 return notaService.findByNota(notas);
+	}
+	
+	//Metodo para actualizar o guardar una nota usando JpaRepository
+	@PatchMapping(value ="/actualizarNota")
+	public NotaEntity actualizaNota(@RequestBody NotaEntity nota) {
+		NotaEntity actualizaNota=null;
+		if  (validateNota(nota)) {
+			actualizaNota = notaService.save(nota);
+			
+		
+		}else {
+			System.out.println("Error al Actualizar");
+		}
+		return actualizaNota;
+	}
 	//Metodo para obtener crear una nota usando JpaRepository
 	
 	//Metodo para obtener todas las Asignaturas usando JpaRepository
@@ -92,7 +109,22 @@ public class Controlador {
 
 		}
 		
-		
+		private boolean validateNota(NotaEntity nota) {
+
+			boolean isValid = true;
+				//uso de libreria StringUtils para validar los campos nulos o vacios
+			if (nota.getNota()==0) {
+				isValid = false;
+			}			
+			
+			if(nota.getId()==0){
+				
+				isValid = false;
+			}
+
+			return isValid;
+
+		}
 		
 		
 		
